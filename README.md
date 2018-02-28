@@ -81,12 +81,12 @@ now we can verify it in psql it should show blank tables created :
 
 List of relations               
 
-| Schema | Name   | Type                 | Owner |      |
-| ------ | ------ | -------------------- | ----- | ---- |
-|        | public | knex_migrations      | table | dev  |
-|        | public | knex_migrations_lock | table | dev  |
-|        | public | posts                | table | dev  |
-|        | public | users                | table | dev  |
+| Schema | Name   | Type                 | Owner |
+| ------ | ------ | -------------------- | ----- |
+| public | knex_migrations      | table | dev  |
+| public | knex_migrations_lock | table | dev  |
+| public | posts                | table | dev  |
+| public | users                | table | dev  |
 
 -------------
 
