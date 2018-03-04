@@ -1,7 +1,17 @@
 'use strict';
 
+const config = require('config');
 const { table } = require('../orm');
+const PORT = config.port || 4000;
+const express = require('express');
+const routes = require('./routes');
 
-const posts = table('posts').all();
+var app = express();
 
-posts.then(d => console.log(d));
+app.use('/', routes(app, table));
+
+const server = app.listen(PORT, () => {
+  console.log(`Server listening on port: ${PORT}`);
+});
+
+module.exports = server;
